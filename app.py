@@ -38,7 +38,7 @@ def index():
         mensagem = request.form["mensagem"]
         
         traducao = GoogleTranslator(source='pt', target='en').translate(mensagem)
-        mensagem_em_ingles = traducao if traducao else ""  # Garante que o valor não seja None
+        mensagem_em_ingles = traducao if traducao else "" 
         
         corpus = [mensagem_em_ingles] + netflix['texto_completo'].tolist()
      
